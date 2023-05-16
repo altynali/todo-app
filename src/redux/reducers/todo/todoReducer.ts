@@ -10,7 +10,7 @@ export default function todoReducer(state = initialState, action: TodoAction): T
         case TodoActionEnum.ADD_TODO:
             return { ...state, todos: [...state.todos, action.payload] }
         case TodoActionEnum.DELETE_TODO: {
-            const arr = state.todos.filter((item) => item.time !== action.payload)
+            const arr = state.todos.filter((item) => item.id !== action.payload)
 
             return { ...state, todos: arr }
         }

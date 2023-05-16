@@ -16,7 +16,7 @@ export interface AddTodoAction {
 
 export interface DeleteTodoAction {
     type: TodoActionEnum.DELETE_TODO
-    payload: string
+    payload: number
 }
 
 export type TodoAction = AddTodoAction | DeleteTodoAction

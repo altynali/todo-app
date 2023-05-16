@@ -6,8 +6,8 @@ export const TodoActionCreators = {
         type: TodoActionEnum.ADD_TODO,
         payload: todo,
     }),
-    deleteTodo: (time: string): DeleteTodoAction => ({
+    deleteTodo: (id: number): DeleteTodoAction => ({
         type: TodoActionEnum.DELETE_TODO,
-        payload: time,
+        payload: id,
     }),
 }

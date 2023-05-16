@@ -28,6 +28,7 @@ export const Form = () => {
             name,
             description,
             time,
+            id: Date.now(),
         }
         dispatch(TodoActionCreators.addTodo(newTodo))
 

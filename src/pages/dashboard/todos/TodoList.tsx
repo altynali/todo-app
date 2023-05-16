@@ -23,7 +23,7 @@ export const TodoList = () => {
 
     return (
         <div className={styles.root}>
-            {todos.length !== 0 ? todos?.map((todo) => <TodoItem todo={todo} key={todo.time} />) : 'no todos'}
+            {todos.length !== 0 ? todos?.map((todo) => <TodoItem todo={todo} key={todo.id} />) : 'no todos'}
         </div>
     )
 }

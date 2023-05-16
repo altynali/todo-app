@@ -20,10 +20,10 @@ export const TodoItem: FC<TodoItemProps> = ({ todo }) => {
     const styles = useStyles()
     const dispatch = useAppDispatch()
 
-    const { name, description, time } = todo
+    const { name, description, time, id } = todo
 
     const handleDeleteTodo = () => {
-        dispatch(TodoActionCreators.deleteTodo(time))
+        dispatch(TodoActionCreators.deleteTodo(id))
     }
     return (
         <Card className={styles.root}>

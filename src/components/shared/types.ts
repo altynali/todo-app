@@ -2,6 +2,7 @@ export type TodoType = {
     name: string
     description: string
     time: string
+    id: number
 }
 
 export type PokemonType = {
