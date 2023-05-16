@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .env
 .turbo
+
+# Local Netlify folder
+.netlify
