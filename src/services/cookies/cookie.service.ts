@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
-import { NameToken } from '@/services/token/enum/tokenType.enum'
-import { Token } from '@/services/token/interface/token.interface'
+import { Token } from '../token/interface/token.interface'
+import { NameToken } from '../token/enum/tokenType.enum'
 
 export const CookieService = {
     setToken: ({ name, hash }: Token): void => {

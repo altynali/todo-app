@@ -1,7 +1,7 @@
-import { CookieService } from '@/services/cookies/cookie.service'
-import { NameToken } from '@/services/token/enum/tokenType.enum'
-import { AuthTokenList } from '@/services/token/interface/token.interface'
-import { requestsAuth } from '@/services/apiAuth'
+import { requestsAuth } from '../apiAuth'
+import { CookieService } from '../cookies/cookie.service'
+import { NameToken } from './enum/tokenType.enum'
+import { AuthTokenList } from './interface/token.interface'
 
 export const RefreshTokenService = {
     updateToken: async (refreshToken: string) => {

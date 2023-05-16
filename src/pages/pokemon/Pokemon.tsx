@@ -1,7 +1,6 @@
-import { Box } from '@mui/material'
-import { Form } from './Form'
+import { Box, Button } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
-import { TodoList } from './todos/TodoList'
+import { PokemonList } from './items/PokemonsList'
 
 const useStyles = makeStyles(() =>
     createStyles({
@@ -9,13 +8,12 @@ const useStyles = makeStyles(() =>
     }),
 )
 
-export const Dashboard = () => {
+export const Pokemon = () => {
     const styles = useStyles()
 
     return (
         <Box className={styles.root}>
-            <Form />
-            <TodoList />
+            <PokemonList />
         </Box>
     )
 }

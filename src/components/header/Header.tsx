@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { AppBar, IconButton, Stack, Toolbar, Typography, useTheme } from '@mui/material'
 import BuildIcon from '@mui/icons-material/Build'
-import { useAppDispatch } from '@/redux/store'
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useNavigate } from 'react-router-dom'
 import { AccountCircle } from '@mui/icons-material'
-import { ThemeSwitchContext } from '@/theme/theme'
+import { ThemeSwitchContext } from '../../theme/theme'
+import { useAppDispatch } from '../../redux/store'
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted'
 
 export const Header = () => {
     const themeMaterial = useTheme()
@@ -22,7 +24,9 @@ export const Header = () => {
                 }}
             >
                 <Stack direction={`row`} spacing={3} alignItems={`center`}>
-                    <BuildIcon />
+                    <IconButton size="large" color="inherit" onClick={() => navigate('/pokemon')}>
+                        <CatchingPokemonIcon />
+                    </IconButton>
                     <Typography variant={'h6'} component={'div'}>
                         Hello appbar
                     </Typography>
@@ -32,9 +36,9 @@ export const Header = () => {
                         aria-controls="primary-search-account-menu"
                         aria-haspopup="true"
                         color="inherit"
-                        onClick={() => navigate('/sign-in')}
+                        onClick={() => navigate('/')}
                     >
-                        <AccountCircle />
+                        <FormatListBulletedIcon />
                     </IconButton>
                 </Stack>
                 {themeMaterial.palette.mode} mode

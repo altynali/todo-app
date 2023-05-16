@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import { CookieService } from '@/services/cookies/cookie.service'
-import { RefreshTokenService } from '@/services/token/refreshToken.service'
-import { Token } from '@/services/token/interface/token.interface'
+import { CookieService } from './cookies/cookie.service'
+import { Token } from './token/interface/token.interface'
+import { RefreshTokenService } from './token/refreshToken.service'
 
 const refreshToken: string = CookieService.getRefreshToken()
 const accessToken: Token = CookieService.getAccessToken()

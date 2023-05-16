@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import { CookieService } from '@/services/cookies/cookie.service'
+import { CookieService } from './cookies/cookie.service'
 
 const instanceAuth = axios.create({
     baseURL: import.meta.env.VITE_BASE_URL,
