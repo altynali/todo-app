@@ -27,8 +27,7 @@ export const MainRouter = () => {
         const fetchPokemons = () => {
             dispatch(PokemonActionCreators.fetchPokemons(`?limit=${POKEMON_COUNT}`))
         }
-
-        return () => fetchPokemons()
+        fetchPokemons()
     }, [dispatch])
 
     const pokemonRoutes = createEachPokemonRoute(pokemons)
