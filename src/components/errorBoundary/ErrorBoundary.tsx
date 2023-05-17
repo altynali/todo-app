@@ -23,17 +23,20 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
         console.error('Error caught by ErrorBoundary:', error, errorInfo)
     }
 
-    render(): ReactNode {
-        const { hasError, error, errorAxios } = this.state
-        const { children } = this.props
+    componentDidMount(): void {
+        const { errorAxios } = this.state
 
-        if (errorAxios) {
+        if (errorAxios)
             this.setState({
                 ...this.state,
                 hasError: true,
                 error: errorAxios,
             })
-        }
+    }
+
+    render(): ReactNode {
+        const { hasError, error } = this.state
+        const { children } = this.props
 
         if (hasError) {
             return (
