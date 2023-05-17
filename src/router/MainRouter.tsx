@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 import ErrorBoundary from '../components/errorBoundary'
 import { appStateSelector } from '../redux/reducers/app/appReducer'
 import { pokemonStateSelector } from '../redux/reducers/pokemon/pokemonReducer'
-import { Loader } from '../components/Loader/Loader'
+import { Loader } from '../components/loader/Loader'
 
 const ReturnComponent = (Component: React.ComponentType) => {
     return <Component />

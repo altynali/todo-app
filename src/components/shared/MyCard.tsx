@@ -2,7 +2,7 @@ import * as React from 'react'
 import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import { TodoType } from './types'
-import { convertTime } from './utils/convertTime'
+import { convertTime } from '../../services/utils/convertTime'
 
 export type MyCardProps = {
     image?: string
