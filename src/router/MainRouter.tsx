@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { IRoute, routePublic } from './routes/routePublic'
 import { routeDashboard } from './routes/routeDashboard'
-import { CircularProgress, CssBaseline } from '@mui/material'
+import { CssBaseline } from '@mui/material'
 import { ThemeSettingProvider } from '../theme/theme'
 import { Layout } from '../components/layout/Layout'
 import { createEachPokemonRoute, routePokemon } from './routes/routePokemon'
